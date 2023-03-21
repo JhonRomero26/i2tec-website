@@ -1,0 +1,12 @@
+@custom-media --xs (width >= 320px);
+@custom-media --sm (width >= 520px);
+@custom-media --md (width >= 720px);
+@custom-media --lg (width >= 990px);
+@custom-media --xl (width >= 1200px);
+@custom-media --xxl (width >= 1400px);
+
+@custom-media --avobe-sm (width < 520px);
+@custom-media --avobe-md (width < 720px);
+@custom-media --avobe-lg (width < 990px);
+@custom-media --avobe-xl (width < 1200px);
+@custom-media --avobe-xxl (width < 1400px);

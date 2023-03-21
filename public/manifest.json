@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "I2TEC",
+  "short_name": "Centro de investigación I2TEC",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Somos un centro de la Universidad Nacional de Loja que se dedica a la investigación y desarrollo técnológico."
+}

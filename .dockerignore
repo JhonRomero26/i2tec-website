@@ -1,0 +1,26 @@
+# Build
+/dist
+/lib
+/lib-types
+/server
+/tmp
+
+# Development
+node_modules
+
+# Cache
+.cache
+.mf
+.rollup.cache
+tsconfig.tsbuildinfo
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
