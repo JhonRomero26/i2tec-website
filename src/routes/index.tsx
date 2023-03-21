@@ -3,13 +3,17 @@ import { component$, useStyles$ } from '@builder.io/qwik'
 import type { DocumentHead } from '@builder.io/qwik-city'
 
 import styles from './styles/home.css?inline'
+import { Icon } from '~/components/Icon'
 
 export default component$(() => {
   useStyles$(styles)
 
   return (
     <main>
-      <section>Home</section>
+      <section>
+        Home
+        <Icon name="user" />
+      </section>
     </main>
   )
 })
