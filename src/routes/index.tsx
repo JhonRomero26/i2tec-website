@@ -7,7 +7,11 @@ import styles from './styles/home.css?inline'
 export default component$(() => {
   useStyles$(styles)
 
-  return <main>Home</main>
+  return (
+    <main>
+      <section>Home</section>
+    </main>
+  )
 })
 
 export const head: DocumentHead = {
