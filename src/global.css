@@ -20,6 +20,8 @@
 
 :root {
   --background: #ffffff;
+  --layer-01: #f5f5f5;
+  --border-subtle-01: #d9d9d9;
 }
 
 :root {
@@ -45,6 +47,22 @@
   --bp-xxl: 1400px;
 }
 
+:root {
+  --trans-timing: cubic-bezier(0.91, 0.34, 0.47, 0.95);
+  --trans-duration: 150ms;
+
+  --transition-all: all var(--trans-duration) var(--trans-timing);
+  --transition-colors: color var(--trans-duration) var(--trans-timing),
+    background-color var(--trans-duration) var(--trans-timing),
+    border-color var(--trans-duration) var(--trans-timing),
+    text-decoration-color var(--trans-duration) var(--trans-timing),
+    fill var(--trans-duration) var(--trans-timing),
+    stroke var(--trans-duration) var(--trans-timing);
+  --transition-opacity: opacity var(--trans-duration) var(--trans-timing);
+  --transition-shadow: box-shadow var(--trans-duration) var(--trans-timing);
+  --transition-transform: transform var(--trans-duration) var(--trans-timing);
+}
+
 /***********************
 ************************
 **
@@ -54,33 +72,34 @@
 ************************/
 
 :root {
-  --text-6xl: 3.75rem;
-  --text-5xl: 3rem;
-  --text-4xl: 2.25rem;
-  --text-3xl: 1.875rem;
-  --text-2xl: 1.5rem;
-  --text-xl: 1.25rem;
-  --text-lg: 1.125rem;
-  --text-base: 1rem;
-  --text-sm: 0.875rem;
-  --text-xs: 0.75rem;
-  --text-2xs: 0.625rem;
-  --text-3xs: 0.5rem;
+  --text-scale: 0.875;
+  --text-6xl: calc(3.75rem * var(--text-scale));
+  --text-5xl: calc(3rem * var(--text-scale));
+  --text-4xl: calc(2.25rem * var(--text-scale));
+  --text-3xl: calc(1.875rem * var(--text-scale));
+  --text-2xl: calc(1.5rem * var(--text-scale));
+  --text-xl: calc(1.25rem * var(--text-scale));
+  --text-lg: calc(1.125rem * var(--text-scale));
+  --text-base: calc(1rem * var(--text-scale));
+  --text-sm: calc(0.875rem * var(--text-scale));
+  --text-xs: calc(0.75rem * var(--text-scale));
+  --text-2xs: calc(0.625rem * var(--text-scale));
+  --text-3xs: calc(0.5rem * var(--text-scale));
 }
 
 :root {
-  --hline-6xl: 1;
-  --hline-5xl: 1;
-  --hline-4xl: 2.5rem;
-  --hline-3xl: 2.25rem;
-  --hline-2xl: 2rem;
-  --hline-xl: 1.75rem;
-  --hline-lg: 1.75rem;
-  --hline-base: 1.5rem;
-  --hline-sm: 1.25rem;
-  --hline-xs: 1rem;
-  --hline-2xs: 0.875rem;
-  --hline-3xs: 0.75rem;
+  --hline-6xl: calc(1 * var(--text-scale));
+  --hline-5xl: calc(1 * var(--text-scale));
+  --hline-4xl: calc(2.5rem * var(--text-scale));
+  --hline-3xl: calc(2.25rem * var(--text-scale));
+  --hline-2xl: calc(2rem * var(--text-scale));
+  --hline-xl: calc(1.75rem * var(--text-scale));
+  --hline-lg: calc(1.75rem * var(--text-scale));
+  --hline-base: calc(1.5rem * var(--text-scale));
+  --hline-sm: calc(1.25rem * var(--text-scale));
+  --hline-xs: calc(1rem * var(--text-scale));
+  --hline-2xs: calc(0.875rem * var(--text-scale));
+  --hline-3xs: calc(0.75rem * var(--text-scale));
 }
 
 /***********************
@@ -170,19 +189,19 @@ h6 {
 ************************
 ************************/
 
-/* Font Ligth */
+/* Font Thin */
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Light.woff2') format('woff2');
-  font-weight: 300;
+  src: url('/fonts/Montserrat-Thin.woff2') format('woff2');
+  font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-LightItalic.woff2') format('woff2');
-  font-weight: 300;
+  src: url('/fonts/Montserrat-ThinItalic.woff2') format('woff2');
+  font-weight: 100;
   font-style: italic;
 }
 
@@ -243,7 +262,7 @@ h6 {
 ************************/
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body {
@@ -266,14 +285,18 @@ a {
   }
 }
 
-@media (--md) {
-  html {
-    font-size: 16px;
+@media (--sm) {
+  :root {
+    --text-scale: 1;
   }
 }
 
 @media (--xxl) {
-  html {
-    font-size: 18px;
+  :root {
+    --text-scale: 1.125;
   }
+}
+
+.ti {
+  font-size: 1.5rem;
 }

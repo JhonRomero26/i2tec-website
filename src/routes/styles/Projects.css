@@ -1,0 +1,59 @@
+.Projects {
+  --padding-top: 64px;
+  --padding-bottom: 24px;
+  --padding-x: 16px;
+  @extend %container-var;
+
+  padding: var(--padding-top) var(--padding-x) var(--padding-bottom);
+  display: grid;
+  gap: 3rem 2rem;
+
+  &-title {
+    font-size: var(--text-3xl);
+    line-height: var(--hline-3xl);
+  }
+
+  &-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--layer-01);
+    padding: 2rem 1rem;
+    height: min-content;
+
+    &-search {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  &-shoot {
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem 1rem;
+
+      .CardProject {
+        img {
+          transition: var(--transition-transform);
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  @media (--lg) {
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: min-content 1fr;
+
+    &-title {
+      grid-column: 1 / span 2;
+    }
+  }
+}

@@ -2,9 +2,11 @@ module.exports = {
   plugins: {
     autoprefixer: {},
     '@csstools/postcss-global-data': {
-      files: ['./postcssConfigs/breakpoints.css'],
+      files: [
+        './postcssConfigs/breakpoints.css',
+        './postcssConfigs/containers.css',
+      ],
     },
-    'postcss-nested': {},
     'postcss-preset-env': {
       stage: 2,
       features: {
@@ -13,5 +15,10 @@ module.exports = {
         },
       },
     },
+    'postcss-nested': {},
+    'postcss-pxtorem': {},
+    'postcss-advanced-variables': {},
+    // 'postcss-viewport-height-correction': {},
+    'postcss-extend-rule': {},
   },
 }

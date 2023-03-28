@@ -1,0 +1,43 @@
+.ProjectDetail {
+  --padding-top: 64px;
+  --padding-bottom: 24px;
+  --padding-x: 16px;
+
+  @extend %container-var;
+  width: min(var(--bp-xl), 100%);
+  padding: var(--padding-top) var(--padding-x) var(--padding-bottom);
+  margin-left: auto;
+  margin-right: auto;
+
+  &-body {
+    padding-top: 4rem;
+  }
+
+  &-figure {
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  &-image {
+    aspect-ratio: 19/10;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem 2rem;
+  }
+
+  &-title {
+    font-size: var(--text-5xl);
+    line-height: var(--hline-5xl);
+    font-weight: 700;
+  }
+
+  &-description {
+    margin-top: 1rem;
+  }
+}

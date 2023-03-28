@@ -1,0 +1,49 @@
+@import '/node_modules/swiper/swiper-bundle.min.css';
+
+$scale: 115%;
+
+.swiper {
+  isolation: isolate;
+}
+
+.swiper-scale {
+  overflow: visible;
+
+  .swiper-wrapper {
+    --scale: $scale;
+
+    &:hover > .swiper-slide:not(:hover) {
+      opacity: 0.5;
+    }
+
+    &:hover .swiper-slide:hover {
+      --translate-slide: calc((var(--scale) - 100%) / 2);
+      transform: translateX(var(--translate-slide)) scale(var(--scale));
+      opacity: 1;
+    }
+
+    .swiper-slide {
+      transition: opacity 250ms ease, transform 250ms ease;
+    }
+
+    .swiper-slide:hover ~ .swiper-slide {
+      --translate-slides: calc(var(--scale) - 100%);
+      transform: translate3d(var(--translate-slides), 0, 0);
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--primary);
+  font-size: var(--text-4xl);
+  line-height: var(--hline-xl);
+  border-radius: 50%;
+  height: var(--text-4xl);
+  width: var(--text-4xl);
+  background-color: rgba(255, 255, 255, 0.5);
+
+  &::after {
+    all: initial;
+  }
+}

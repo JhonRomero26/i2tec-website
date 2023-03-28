@@ -1,0 +1,32 @@
+.btn {
+  display: inline-flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--layer-01);
+  transition: var(--transition-opacity);
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+
+  &-primary {
+    color: #fff;
+    background-color: var(--primary);
+  }
+
+  &-icon {
+    font-size: var(--text-xl);
+    line-height: 1;
+    padding: 0.75rem;
+  }
+
+  &-danger {
+    color: #fff;
+    background-color: var(--danger);
+  }
+}

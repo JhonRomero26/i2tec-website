@@ -1,0 +1,17 @@
+%container-var {
+  @media (--sm) {
+    --padding-x: 24px;
+  }
+
+  @media (--md) {
+    --padding-x: 32px;
+  }
+
+  @media (--lg) {
+    --padding-x: 64px;
+  }
+
+  @media (--xl) {
+    --padding-x: 128px;
+  }
+}

@@ -21,104 +21,282 @@
       "image": "https://source.unsplash.com/random"
     }
   ],
-  "proyects": [
+  "categories": [
     {
-      "id": 1,
-      "slug": "/",
+      "id": "1",
+      "name": "Química"
+    },
+    {
+      "id": "2",
+      "name": "Técnología"
+    },
+    {
+      "id": "3",
+      "name": "3D"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
       "title": "Proyecto 1",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Juan Pérez",
-      "date": "2023-03-20"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "2",
+          "name": "Técnología"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-20"
     },
     {
-      "id": 2,
-      "slug": "/",
+      "id": "2",
       "title": "Proyecto 2",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "María Gómez",
-      "date": "2023-03-19"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "2",
+          "name": "Técnología"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-19"
     },
     {
-      "id": 3,
-      "slug": "/",
+      "id": "3",
       "title": "Proyecto 3",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Pedro Rodríguez",
-      "date": "2023-03-18"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "2",
+          "name": "Técnología"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-18"
     },
     {
-      "id": 4,
-      "slug": "/",
+      "id": "4",
       "title": "Proyecto 4",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Ana García",
-      "date": "2023-03-17"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "2",
+          "name": "Técnología"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-17"
     },
     {
-      "id": 5,
-      "slug": "/",
+      "id": "5",
       "title": "Proyecto 5",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Luisa Martínez",
-      "date": "2023-03-16"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-16"
     },
     {
-      "id": 6,
-      "slug": "/",
+      "id": "6",
       "title": "Proyecto 6",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Carlos Sánchez",
-      "date": "2023-03-15"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-15"
     },
     {
-      "id": 7,
-      "slug": "/",
+      "id": "7",
       "title": "Proyecto 7",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Sofía Hernández",
-      "date": "2023-03-14"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-14"
     },
     {
-      "id": 8,
-      "slug": "/",
+      "id": "8",
       "title": "Proyecto 8",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Jorge Ramírez",
-      "date": "2023-03-13"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-13"
     },
     {
-      "id": 9,
-      "slug": "/",
+      "id": "9",
       "title": "Proyecto 9",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Laura Torres",
-      "date": "2023-03-12"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "2",
+          "name": "Técnología"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-12"
     }
   ],
   "future": [
     {
-      "id": 10,
-      "slug": "/",
+      "id": "10",
       "title": "Proyecto 10",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Jorge Ramírez",
-      "date": "2023-03-13"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "2",
+          "name": "Técnología"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-13"
     },
     {
-      "id": 11,
-      "slug": "/",
+      "id": "11",
       "title": "Proyecto 11",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Laura Torres",
-      "date": "2023-03-12"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "2",
+          "name": "Técnología"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-12"
     },
     {
-      "id": 12,
-      "slug": "/",
+      "id": "12",
       "title": "Proyecto 12",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
       "image": "https://source.unsplash.com/random",
       "author": "Laura Torres",
-      "date": "2023-03-12"
+      "repository": "https://dspace.unl.edu.ec/jspui/handle/123456789/4",
+      "categories": [
+        {
+          "id": "1",
+          "name": "Química"
+        },
+        {
+          "id": "2",
+          "name": "Técnología"
+        },
+        {
+          "id": "3",
+          "name": "3D"
+        }
+      ],
+      "publishedDate": "2023-03-12"
     }
   ]
 }

@@ -2,7 +2,7 @@ import { createDOM } from '@builder.io/qwik/testing'
 import { expect, test, describe } from 'vitest'
 import { Icon } from '~/components/Icon'
 
-import type { IconNames } from '~/types/props'
+import type { IconNames } from '~/utils/types'
 
 const icons: IconNames[]= ['user', 'trash', 'trending-up']
 
