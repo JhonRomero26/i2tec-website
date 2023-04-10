@@ -1,0 +1,23 @@
+.SearchBox {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  &-title {
+    font-size: var(--text-base);
+    line-height: var(--hline-base);
+    font-weight: 500;
+  }
+
+  &-input {
+    display: flex;
+    align-items: center;
+  }
+
+  .input {
+    padding-left: 1rem;
+  }
+}

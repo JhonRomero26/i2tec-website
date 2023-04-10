@@ -1,11 +1,6 @@
 .Footer {
   background-color: var(--primary);
   color: var(--text-inverted);
-  margin-top: 8rem;
-
-  .sr-only {
-    display: none;
-  }
 
   &-container {
     margin-left: auto;

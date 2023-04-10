@@ -1,0 +1,11 @@
+.TitleWithText {
+  width: min(calc(var(--bp-sm) + 100px), 100%);
+  margin-left: auto;
+  margin-right: auto;
+
+  &-title {
+    margin-bottom: 1.5rem;
+  }
+
+  margin-bottom: 3rem;
+}

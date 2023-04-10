@@ -1,5 +1,18 @@
 import type IconNames from './IconNames'
-import type AppRoute from './AppRoute'
-import type SocialRoute from './SocialRoute'
+import type { Route, RouteWithIcon, RouteWithImage } from './Routes'
+import type { TagsHeading } from './TagsHtml'
+import type { FontWeight, FontSize, TextAlign } from './Font'
+import type { ButtonType, InputState } from './PropsHelpers'
 
-export type { IconNames, SocialRoute, AppRoute }
+export type {
+  IconNames,
+  Route,
+  RouteWithIcon,
+  RouteWithImage,
+  TagsHeading,
+  FontWeight,
+  FontSize,
+  TextAlign,
+  ButtonType,
+  InputState,
+}

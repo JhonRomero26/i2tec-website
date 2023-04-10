@@ -2,8 +2,9 @@ import { $, component$, useSignal, useStyles$ } from '@builder.io/qwik'
 import { Link } from '@builder.io/qwik-city'
 
 import styles from '../styles/MainHeader.css?inline'
-import { APP_ROUTES } from '~/utils/constants'
-import Button from '../Button/Button'
+import { APP_ROUTES, SOCIAL_ROUTES } from '~/utils/constants'
+import { IconButton } from '~/components/Button'
+import { Icon } from '../Icon'
 
 const MainHeader = component$(() => {
   useStyles$(styles)
@@ -16,34 +17,60 @@ const MainHeader = component$(() => {
 
   return (
     <header class="MainHeader">
-      <nav class="MainHeader-navigator">
-        <figure class="MainHeader-brand">
-          <Link href="/">
-            <img
-              class="MainHeader-brand-logo"
-              src="/images/i2tec-logo.png"
-              alt="Logo del centro de investigación, innovación y tecnología"
-            />
-          </Link>
-        </figure>
+      <div class="MainHeader-header">
+        <div class="container navigate">
+          <figure class="MainHeader-brand">
+            <Link href="/">
+              <img
+                class="MainHeader-brand-logo"
+                src="/images/i2tec-logo.png"
+                alt="Logo del centro de investigación, innovación y tecnología"
+              />
+            </Link>
+          </figure>
 
-        <Button
-          onClick$={handleToggleMenu$}
-          class="burger-btn"
-          icon="menu-2"
-          aria-label="Menu"
-        />
+          <IconButton
+            onClick$={handleToggleMenu$}
+            class="burger-btn"
+            icon="menu-2"
+            ariaLabel="Menu"
+          />
 
-        <ul class={`navigator-menu${isOpenMenu.value ? ' active' : ''}`}>
-          {APP_ROUTES.map((route) => (
-            <li class="menu-item" key={route.path}>
-              <Link class="menu-item-link" href={route.path}>
-                {route.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+          <nav
+            class={`MainHeader-navigator${isOpenMenu.value ? ' active' : ''}`}
+          >
+            <div>
+              <ul class="navigator-menu">
+                {APP_ROUTES.map((route) => (
+                  <li class="menu-item" key={route.path}>
+                    <Link class="item-link" href={route.path}>
+                      {route.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="navigator-actions">
+              <div class="navigator-socialNetworks">
+                <div class="navigator-socialNetworks-title">
+                  Nuestras redes sociales
+                </div>
+                <ul class="navigator-socialNetworks-menu">
+                  {SOCIAL_ROUTES.map((route) => (
+                    <li key={route.path}>
+                      <a href={route.path} rel="noreferrer" target="_blank">
+                        <Icon title={route.label} name={route.iconName} />
+                        <span class="sr-only">{route.label}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
       {isOpenMenu.value && (
         <div class="cover-protector" onClick$={handleToggleMenu$} />
       )}

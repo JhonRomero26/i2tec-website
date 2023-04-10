@@ -1,0 +1,16 @@
+.Admin {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 64px 1fr;
+  overflow: hidden;
+  height: 100%;
+
+  &-main {
+    background-color: var(--layer-01);
+    overflow-y: overlay;
+  }
+
+  .Sidebar {
+    grid-row: span 2;
+  }
+}

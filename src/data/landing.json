@@ -35,6 +35,16 @@
       "name": "3D"
     }
   ],
+  "news": [
+    {
+      "id": "1",
+      "title": "News 1",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      "publishedDate": "2023-03-12",
+      "image": "https://source.unsplash.com/random",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    }
+  ],
   "projects": [
     {
       "id": "1",

@@ -1,5 +1,16 @@
-import sliderProjectsOptions$ from './SliderProjects'
-import sliderHeroOptions$ from './SliderHero'
-import { APP_ROUTES, SOCIAL_ROUTES } from './routing'
+import projectsOptionsSlider$ from './sliders/projectsSlider'
+import homeHeroOptionsSlider$ from './sliders/homeHeroSlider'
+import { APP_ROUTES, SOCIAL_ROUTES, ADMIN_ROUTES } from './routing'
+import { datePublishedOptions } from './parseDateOptions'
+import { OctagonClipPathCSS, BesselClipPathCSS } from './clipPath'
 
-export { sliderHeroOptions$, sliderProjectsOptions$, APP_ROUTES, SOCIAL_ROUTES }
+export {
+  homeHeroOptionsSlider$,
+  projectsOptionsSlider$,
+  APP_ROUTES,
+  SOCIAL_ROUTES,
+  ADMIN_ROUTES,
+  datePublishedOptions,
+  OctagonClipPathCSS,
+  BesselClipPathCSS,
+}

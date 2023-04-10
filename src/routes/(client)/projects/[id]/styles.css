@@ -1,0 +1,42 @@
+.ProjectDetail {
+  &-container {
+    width: min(var(--bp-xl) - 5rem, 100%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-body {
+    padding-top: 4rem;
+  }
+
+  &-figure {
+    aspect-ratio: 19/10;
+    overflow: hidden;
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem 2rem;
+  }
+
+  &-title {
+    font-size: var(--text-5xl);
+    line-height: var(--hline-5xl);
+    font-weight: 700;
+  }
+
+  &-description {
+    margin-top: 1rem;
+  }
+}

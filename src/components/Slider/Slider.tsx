@@ -10,11 +10,12 @@ import styles from '../styles/Slider.css?inline'
 type SliderProps = {
   selector: string
   options?: QRL<() => SwiperOptions>
-  scaleEffect?: boolean
+  effect?: 'scale-slide' | 'zoom-perspective'
+  class?: string
 }
 
 const Slider = component$(
-  ({ selector, options, scaleEffect = false }: SliderProps) => {
+  ({ selector, options, effect, class: className }: SliderProps) => {
     useStyles$(styles)
 
     useVisibleTask$(async () => {
@@ -24,9 +25,14 @@ const Slider = component$(
       new Swiper(`[data-slider-id="${selector}-slider"]`, opts)
     })
 
-    const classes = cx('swiper', {
-      'swiper-scale': scaleEffect,
-    })
+    const classes = cx(
+      'swiper',
+      {
+        'slider-scale': effect === 'scale-slide',
+        'zoom-perspective': effect === 'zoom-perspective',
+      },
+      className
+    )
 
     return (
       <div data-slider-id={`${selector}-slider`} class={classes}>

@@ -1,0 +1,74 @@
+.Sidebar {
+  background-color: var(--primary);
+  min-height: 100%;
+  width: 64px;
+  color: white;
+  padding-bottom: 1rem;
+  transition: width var(--trans-duration) var(--trans-timing);
+
+  &.full {
+    width: 200px;
+
+    .Sidebar-avatar {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .Sidebar-link {
+      justify-content: initial;
+
+      &-label {
+        display: block;
+      }
+    }
+
+    .AvatarWithUsername-body {
+      display: block;
+    }
+
+    & .Sidebar-button {
+      .ti {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-avatar {
+    position: relative;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 2rem;
+    isolation: isolate;
+
+    .AvatarWithUsername-body {
+      display: none;
+    }
+  }
+
+  &-link {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: var(--transition-colors);
+
+    &:hover {
+      background-color: white;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    &-label {
+      display: none;
+    }
+  }
+
+  & &-button {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 2rem 1rem;
+    transition: var(--transition-transform);
+  }
+}

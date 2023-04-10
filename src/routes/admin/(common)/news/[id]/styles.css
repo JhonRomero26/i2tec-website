@@ -1,0 +1,34 @@
+$width: min(calc(var(--bp-md) - var(--bp-xs)), 100%);
+$width2: min(var(--bp-md), 100%);
+
+.ModifyLayout {
+  display: grid;
+  grid-column: span 2;
+
+  @media (--lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &-left,
+  &-right {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 2rem;
+  }
+
+  &-wrapper {
+    display: inherit;
+    flex-direction: inherit;
+    gap: inherit;
+    width: $width2;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-preview {
+    width: $width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

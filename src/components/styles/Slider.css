@@ -1,24 +1,26 @@
 @import '/node_modules/swiper/swiper-bundle.min.css';
 
 $scale: 115%;
+$padding-scale: calc($scale / 60);
 
 .swiper {
   isolation: isolate;
 }
 
-.swiper-scale {
+.slider-scale {
   overflow: visible;
 
   .swiper-wrapper {
-    --scale: $scale;
+    padding-top: $padding-scale;
+    padding-bottom: $padding-scale;
 
     &:hover > .swiper-slide:not(:hover) {
       opacity: 0.5;
     }
 
     &:hover .swiper-slide:hover {
-      --translate-slide: calc((var(--scale) - 100%) / 2);
-      transform: translateX(var(--translate-slide)) scale(var(--scale));
+      --translate-slide: calc(($scale - 100%) / 2);
+      transform: translateX(var(--translate-slide)) scale($scale);
       opacity: 1;
     }
 
@@ -27,7 +29,7 @@ $scale: 115%;
     }
 
     .swiper-slide:hover ~ .swiper-slide {
-      --translate-slides: calc(var(--scale) - 100%);
+      --translate-slides: calc($scale - 100%);
       transform: translate3d(var(--translate-slides), 0, 0);
     }
   }

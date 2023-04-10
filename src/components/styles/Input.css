@@ -1,11 +1,54 @@
-.input {
+.input,
+.textarea {
   border: 0;
   border-bottom: 2px solid var(--border-subtle-01);
   outline: 0;
   padding: 0.5rem;
+  width: 100%;
   padding-left: 0.25rem;
+  transition: var(--transition-colors);
 
   &:focus {
     border-color: var(--primary);
+  }
+}
+
+.input {
+  --input-height: 42px;
+  height: var(--input-height);
+
+  &-container {
+    position: relative;
+
+    .input {
+      padding-right: 2.5rem;
+    }
+  }
+
+  &-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &-error {
+    border-color: var(--danger);
+  }
+}
+
+.textarea {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &-metas {
+    display: grid;
+    color: var(--text-secondary);
+
+    &-length {
+      justify-self: end;
+    }
   }
 }

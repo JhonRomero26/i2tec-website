@@ -1,0 +1,8 @@
+.MisionAndVision {
+  display: grid;
+  gap: 4rem;
+
+  @media (--lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

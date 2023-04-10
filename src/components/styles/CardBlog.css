@@ -1,0 +1,66 @@
+.CardBlog {
+  border: 1px solid var(--border-subtle-01);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &-image {
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-body {
+    color: var(--text-primary);
+    padding: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  &-target {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  &-targets,
+  &-target-icon {
+    color: var(--text-secondary);
+    font-weight: 700;
+  }
+
+  &-targets {
+    font-size: var(--text-xs);
+    line-height: var(--hline-xs);
+  }
+
+  &-target-icon {
+    font-size: var(--text-base);
+    line-height: var(--hline-base);
+  }
+
+  &-content {
+    padding-bottom: 1rem;
+  }
+
+  &-title {
+    color: var(--primary);
+    font-size: var(--text-lg);
+    line-height: var(--hline-lg);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    -webkit-line-clamp: 2;
+  }
+
+  &-description {
+    font-size: var(--text-sm);
+    line-height: var(--hline-sm);
+    -webkit-line-clamp: 4;
+  }
+
+  &-actions {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle-01);
+  }
+}

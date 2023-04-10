@@ -1,0 +1,48 @@
+.Projects {
+  background-color: var(--layer-01);
+
+  &-container {
+    display: grid;
+    gap: 4rem;
+  }
+
+  &-head {
+    --padding-bottom: 128px;
+    background: linear-gradient(45deg, #b2c7d8, #eef2f3);
+
+    &-inspiration {
+      width: min(var(--bp-md), 100%);
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-title {
+    font-size: var(--text-3xl);
+    line-height: var(--hline-3xl);
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &-shoot {
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem 1rem;
+
+      .CardProject {
+        img {
+          transition: var(--transition-transform);
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}

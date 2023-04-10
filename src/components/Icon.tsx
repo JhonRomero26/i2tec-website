@@ -6,7 +6,7 @@ import type { IconNames } from '~/utils/types'
 import styles from './styles/Icon.css?inline'
 
 type IconProps = {
-  title: string
+  title?: string
   name: IconNames
   class?: string
 }

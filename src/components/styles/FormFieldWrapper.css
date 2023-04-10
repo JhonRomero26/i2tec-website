@@ -1,0 +1,18 @@
+.FormFieldWrapper {
+  display: grid;
+  gap: 0.5rem;
+  isolation: isolate;
+
+  &-label {
+    display: flex;
+    align-items: center;
+  }
+
+  &[data-aria-required] {
+    .FormFieldWrapper-label::after {
+      content: '*';
+      display: block;
+      margin-left: 0.5rem;
+    }
+  }
+}

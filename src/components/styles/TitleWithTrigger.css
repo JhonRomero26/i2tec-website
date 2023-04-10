@@ -1,0 +1,22 @@
+.TitleWithTrigger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+
+  .btn {
+    width: 100%;
+  }
+
+  @media (--sm) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .btn {
+      width: auto;
+    }
+  }
+}

@@ -1,16 +1,13 @@
 .ProjectsSlider {
-  --padding-x: 16px;
-  --padding-top: 128px;
-  --padding-bottom: 24px;
-  @extend %container-var;
-
-  padding: var(--padding-top) var(--padding-x) var(--padding-bottom);
+  padding-top: 128px;
+  padding-bottom: 24px;
   overflow: hidden;
 
   &-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
     margin-bottom: 2rem;
   }
 

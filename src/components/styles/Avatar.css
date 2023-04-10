@@ -1,6 +1,6 @@
 .Avatar {
-  width: 48px;
-  height: 48px;
+  width: calc(42px * var(--scale-size));
+  height: calc(42px * var(--scale-size));
   border-radius: 50%;
   overflow: hidden;
 

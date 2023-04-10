@@ -1,90 +1,68 @@
-import { Slot, component$, useStyles$ } from '@builder.io/qwik'
+import { $, Slot, component$, useStyles$ } from '@builder.io/qwik'
 import cx from 'clsx'
 
-import type {
-  HTMLAttributes,
-  QwikMouseEvent,
-  PropFunction,
-  QRL,
-} from '@builder.io/qwik'
-import type { IconNames } from '~/utils/types'
+import type { HTMLAttributes, QRL } from '@builder.io/qwik'
+import type { ButtonType } from '~/utils/types'
 
 import styles from '../styles/Button.css?inline'
-import { Icon } from '../Icon'
-import { Link } from '@builder.io/qwik-city'
 
 export type BaseButtonProps = {
   type?: 'default' | 'primary' | 'secondary' | 'text'
-  icon?: IconNames
+  size?: 'default' | 'sm' | 'lg'
   class?: string
   danger?: boolean
   block?: boolean
-  onClick$?: PropFunction<() => any>
+  onClick$?: QRL<() => any>
 }
 
-export type AnchorButtonProps = {
-  href?: string
-  to?: string
-} & BaseButtonProps &
-  Omit<HTMLAttributes<HTMLAnchorElement>, 'type' | 'onClick'>
-
 export type NativeButtonProps = {
-  htmlType?: string
+  htmlType?: ButtonType
 } & BaseButtonProps &
   Omit<HTMLAttributes<HTMLButtonElement>, 'type' | 'onClick'>
 
-export type ButtonProps = Partial<AnchorButtonProps & NativeButtonProps>
+export type ButtonProps = NativeButtonProps
+
+export const classesButton = ({
+  type,
+  size,
+  block,
+  danger,
+  className,
+}: ButtonProps): string =>
+  cx(
+    'btn',
+    {
+      [`btn-${type}`]: type !== 'default',
+      [`btn-${size}`]: size !== 'default',
+      'btn-block': block,
+      'btn-danger': danger,
+    },
+    className
+  )
 
 const Button = component$(
   ({
     type = 'default',
     danger = false,
     class: className,
-    icon,
-    children,
-    href,
-    to,
-    onClick$,
+    size = 'default',
+    onClick$ = $(() => {}),
+    htmlType,
+    block,
+    ...restProps
   }: ButtonProps) => {
     useStyles$(styles)
 
-    const existLink = href !== undefined || to !== undefined
-    const linkType = existLink ? (href !== undefined ? 'href' : 'to') : ''
-    const classes = cx(
-      'btn',
-      {
-        [`btn-${type}`]: type !== 'default',
-        'btn-icon': icon && children === undefined,
-        'btn-danger': danger,
-      },
-      className
-    )
-
-    if (linkType === 'href')
-      return (
-        <a
-          onClick$={onClick$}
-          rel="noreferrer"
-          class={classes}
-          href={href}
-          target="_blank"
-        >
-          {icon && <Icon title={icon} name={icon} />}
-          <Slot />
-        </a>
-      )
-
-    if (linkType === 'to')
-      return (
-        <Link onClick$={onClick$} class={classes} href={to}>
-          {icon && <Icon title={icon} name={icon} />}
-          <Slot />
-        </Link>
-      )
+    const classes = classesButton({ type, danger, size, block, className })
 
     return (
-      <button onClick$={onClick$} class={classes}>
-        {icon && <Icon title={icon} name={icon} />}
+      <button
+        {...(restProps as NativeButtonProps)}
+        type={htmlType}
+        onClick$={onClick$}
+        class={classes}
+      >
+        <Slot name="icon" />
         <Slot />
       </button>
     )

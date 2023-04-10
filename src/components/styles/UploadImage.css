@@ -1,0 +1,9 @@
+.UploadImage {
+  border: 2px dashed var(--primary);
+  display: grid;
+  place-content: center;
+  padding: 3rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  background-color: var(--background);
+}

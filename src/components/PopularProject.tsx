@@ -30,7 +30,7 @@ export const PopularProject = component$(({ project }: PopularProject) => {
     <article class="PopularProject">
       <img class="PopularProject-image" src={image} title={title} alt={title} />
       <Link href={`/projects/${id}`} class="PopularProject-content">
-        <h3 class="PopularProject-title">{title}</h3>
+        <h3 class="PopularProject-title text-ellipsis">{title}</h3>
         <div class="PopularProject-metainfo">
           <div class="PopularProject-option">
             <Icon title="Fecha de publicación" name="calendar" />

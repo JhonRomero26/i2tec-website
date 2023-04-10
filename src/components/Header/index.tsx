@@ -1,3 +1,4 @@
 import MainHeader from './MainHeader'
+import AdminHeader from './AdminHeader'
 
-export { MainHeader }
+export { AdminHeader, MainHeader }

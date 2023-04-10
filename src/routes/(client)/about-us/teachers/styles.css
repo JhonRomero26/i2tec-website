@@ -1,0 +1,15 @@
+.TeachersPage {
+  &-title {
+    margin-bottom: 3rem;
+  }
+  &-detail {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+
+  &-teachers-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+}

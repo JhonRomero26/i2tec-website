@@ -1,32 +1,77 @@
 .btn {
+  --btn-height: 42px;
+
+  cursor: pointer;
   display: inline-flex;
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  height: var(--btn-height);
   border: 0;
   padding: 0.5rem 1rem;
-  background-color: var(--layer-01);
-  transition: var(--transition-opacity);
+  background-color: transparent;
+  transition: var(--transition-colors);
 
   &:hover {
-    opacity: 0.8;
+    background-color: var(--layer-01);
     text-decoration: none;
   }
 
   &-primary {
     color: #fff;
     background-color: var(--primary);
+
+    &:hover {
+      background-color: rgba(var(--primary-rgb), 0.8);
+    }
+  }
+
+  &-secondary {
+    color: var(--primary);
+    background-color: white;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
   }
 
   &-icon {
+    --btn-width: var(--btn-height);
     font-size: var(--text-xl);
     line-height: 1;
     padding: 0.75rem;
+    width: var(--btn-width);
   }
 
   &-danger {
     color: #fff;
     background-color: var(--danger);
+
+    &:hover {
+      background-color: rgba(var(--danger-rgb), 0.8);
+    }
+  }
+
+  &-block {
+    display: flex;
+    width: 100%;
+  }
+
+  &-sm {
+    --btn-height: 36px;
+
+    &-icon {
+      font-size: var(--text-lg);
+      line-height: 1;
+    }
+  }
+
+  &-lg {
+    --btn-height: 48px;
+
+    &-icon {
+      font-size: var(--text-2xl);
+      line-height: var(--hline-2xl);
+    }
   }
 }
